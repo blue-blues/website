@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nerd Student Portfolio - Sci-Fi Edition</title>
+    <title>Vaibhav Gavade</title>
     <style>
         body, html {
             margin: 0;
@@ -17,16 +17,25 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeIn 1s ease-in-out forwards; /* Container fade-in */
         }
         header {
             background: linear-gradient(45deg, #000, #003);
             padding: 2rem;
             text-align: center;
             border-bottom: 2px solid #0ff;
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeInDown 1.5s ease-in-out forwards;
         }
         h1, h2 {
             color: #fff;
             text-shadow: 0 0 10px #0ff;
+        }
+        h1 {
+            animation: glow 3s infinite; /* Glowing effect for h1 */
         }
         .section {
             background: rgba(0, 30, 60, 0.5);
@@ -34,14 +43,21 @@
             margin-bottom: 20px;
             border: 1px solid #0ff;
             box-shadow: 0 0 15px #0ff;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1.2s ease-in-out forwards;
         }
         .project {
             margin-bottom: 15px;
             border-left: 3px solid #0ff;
             padding-left: 10px;
+            transition: transform 0.3s ease-in-out;
         }
         .project h3 {
             color: #fff;
+        }
+        .project:hover {
+            transform: scale(1.05); /* Zoom effect on hover */
         }
         .skills-grid {
             display: grid;
@@ -59,74 +75,61 @@
             padding: 20px;
             background: linear-gradient(45deg, #003, #000);
             border-top: 2px solid #0ff;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 2s ease-in-out forwards;
         }
         a {
             color: #0ff;
             text-decoration: none;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
         }
         a:hover {
             text-shadow: 0 0 5px #0ff;
         }
         @keyframes glow {
-            0% { box-shadow: 0 0 5px #0ff; }
-            50% { box-shadow: 0 0 20px #0ff, 0 0 30px #0ff; }
-            100% { box-shadow: 0 0 5px #0ff; }
+            0% { text-shadow: 0 0 10px #0ff; }
+            50% { text-shadow: 0 0 30px #0ff; }
+            100% { text-shadow: 0 0 10px #0ff; }
         }
-        .glow {
-            animation: glow 2s infinite;
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInDown {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1 class="glow">JOHN DOE</h1>
+        <h1>VAIBHAV GAVADE</h1>
         <p>// AI Innovator | Medical Tech Pioneer | Clean Energy Visionary</p>
     </header>
 
     <div class="container">
         <section class="section">
             <h2>SYSTEM::ABOUT</h2>
-            <p>Greetings, I am a human-AI hybrid entity exploring the frontiers of technology. My mission: to synthesize artificial intelligence, advanced medical science, and sustainable energy into groundbreaking solutions for humanity's future.</p>
-        </section>
-
-        <section class="section">
-            <h2>PROJECTS::INITIALIZED</h2>
-            <div class="project">
-                <h3>Neural Net Diagnostics</h3>
-                <p>Engineered a quantum-enhanced neural network capable of diagnosing complex diseases with 99.9% accuracy, surpassing human capabilities.</p>
-            </div>
-            <div class="project">
-                <h3>Fusion Grid Protocol</h3>
-                <p>Devised an AI-driven fusion reactor control system, optimizing energy output and bringing sustainable fusion power closer to reality.</p>
-            </div>
-            <div class="project">
-                <h3>BioSynthetic Organ Fabricator</h3>
-                <p>Created a nanobot-powered 3D bioprinter that can generate fully functional human organs from synthetic biological materials.</p>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>SKILLS::MATRIX</h2>
-            <div class="skills-grid">
-                <div class="skill-item">Quantum Computing</div>
-                <div class="skill-item">Neuro-AI Fusion</div>
-                <div class="skill-item">Nanotech Engineering</div>
-                <div class="skill-item">Bioinformatics</div>
-                <div class="skill-item">Fusion Dynamics</div>
-                <div class="skill-item">Cyborg Systems</div>
-            </div>
+            <p>Hello and welcome! I’m a unique blend of human intuition and AI capabilities, diving deep into the exciting realms of technology. My goal? To merge artificial intelligence, cutting-edge medical science, and sustainable energy into innovative solutions that can truly make a difference for our future.</p>
+            <p>I’m here to explore how these powerful fields can work together to address some of humanity's biggest challenges. Whether it’s advancing healthcare with smart tech, developing new energy solutions that are both green and efficient, or creating intelligent systems that enhance our lives, my mission is all about pioneering breakthroughs that push the boundaries of what’s possible.</p>
+            <p>Join me on this journey as we explore, innovate, and pave the way for a brighter, more sustainable future!</p>
         </section>
 
         <section class="section">
             <h2>CONTACT::PROTOCOL</h2>
-            <p>Neural Link: john.doe@hive-mind.com</p>
-            <p>GitHub Nexus: <a href="https://github.com/quantum-john">github.com/quantum-john</a></p>
-            <p>Holo-LinkedIn: <a href="https://linkedin.com/in/cyber-john">linkedin.com/in/cyber-john</a></p>
+            <p>Email Link: <a href="mailto:hello@vaibhavgavade.com">hello@vaibhavgavade.com</a></p>
+            <!-- <p>GitHub Nexus: <a href="https://github.com/quantum-john">github.com/quantum-john</a></p> -->
+            <p>Holo-LinkedIn: <a href="https://www.linkedin.com/in/vaibhav-gavade">https://www.linkedin.com/in/vaibhav-gavade/</a></p>
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2154 John Doe | All rights reserved across all dimensions</p>
+        <p>&copy; 2154 VAIBHAV GAVADE | All rights reserved across all dimensions</p>
     </footer>
 </body>
 </html>
